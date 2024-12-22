@@ -1,0 +1,42 @@
+body {
+  font-family: 'Playfair Display', serif;
+  background: url('assets/paris.jpg') no-repeat center center/cover;
+  color: #2c3e50;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 3rem;
+  color: #e74c3c;
+  margin-top: 20px;
+}
+.subtitle {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.countdown {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+.animated-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.error-message {
+  color: #e74c3c;
+}
