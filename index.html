@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Morgany</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise 40th Birthday Reveal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Click for your surprise! 🎉</h1>
-    <p class="subtitle">Countdown to your Surprise:</p>
-    <div id="countdown" class="countdown"></div>
-    <button id="reveal-button" class="animated-button">Reveal Your Surprise</button>
-    <input type="password" id="passcode" placeholder="Enter Passcode" style="display:none;">
-    <button id="submit-passcode" style="display:none;">Submit</button>
-    <p id="error-message" class="error-message" style="display:none;">Incorrect passcode. Try again.</p>
+    <div id="reveal-container">
+        <h1>Welcome to the Surprise!</h1>
+        <button id="reveal-button" class="animated-button">Reveal Your Surprise</button>
+        <input type="text" id="passcode" placeholder="Enter Passcode" style="display: none;">
+        <button id="submit-passcode" style="display: none;">Submit</button>
+        <p id="error-message" style="display: none;">Incorrect passcode. Please try again.</p>
+    </div>
   <audio autoplay loop>
     <source src="assets/music.mp3" type="audio/mpeg">
   </audio>
