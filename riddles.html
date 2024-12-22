@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riddle Challenge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Riddle Challenge</h1>
+    <p>Solve the riddle to unlock the next page:</p>
+    <p id="riddle">I fly without wings, I cry without eyes. Wherever I go, darkness flies. What am I?</p>
+    <input type="text" id="riddle-answer" placeholder="Your answer">
+    <button id="submit-riddle">Submit</button>
+    <p id="riddle-error" style="display:none;">Incorrect! Try again.</p>
+  </div>
+  <script>
+    const answer = "cloud";
+    document.getElementById('submit-riddle').addEventListener('click', () => {
+      const userAnswer = document.getElementById('riddle-answer').value.toLowerCase();
+      if (userAnswer === answer) {
+        window.location.href = 'day1.html';
+      } else {
+        document.getElementById('riddle-error').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
