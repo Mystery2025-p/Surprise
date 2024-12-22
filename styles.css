@@ -1,80 +1,105 @@
-/* Set background image for the entire body */
+/* Global Styles */
 body {
-    background-image: url('assets/pexels.jpg');  /* Path to your image */
-    background-size: cover;  /* Makes sure the image covers the whole screen */
-    background-position: center;  /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents repeating the image */
-    height: 100vh;  /* Makes sure the background takes up the entire viewport */
-    display: flex;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(120deg, #f6d365, #fda085); /* Gradient background */
+    color: #2c3e50; /* Text color */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height background */
+    display: flex; /* Flex container for centering */
     justify-content: center;
     align-items: center;
-    text-align: center;  /* Centers the content (button) */
 }
 
-/* Style the Reveal Button */
-#reveal-button {
-    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent background to make text readable */
-    border: none;
-    padding: 20px 40px;
-    font-size: 20px;
-    color: #333;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-#reveal-button:hover {
-    background-color: rgba(255, 255, 255, 0.6);  /* Slightly darker on hover */
-    transform: scale(1.1);  /* Button grows slightly on hover */
-}
-
-/* Optional: Style the input and passcode section */
-#passcode {
-    padding: 10px;
-    font-size: 16px;
-    margin-top: 20px;
+/* Centered Passcode Input and Button */
+#passcode, #submit-passcode {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
     border-radius: 5px;
+    border: 2px solid #3498db;
+    outline: none;
+}
+
+#passcode:focus {
+    border-color: #e74c3c;
+    background-color: #fdfefe;
 }
 
 #submit-passcode {
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    background-color: #ddd;
-    border: none;
+    background-color: #3498db;
+    color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #submit-passcode:hover {
-    background-color: #ccc;
-}
-/* Error message styling */
-#error-message {
-  color: #e74c3c;
-  font-weight: bold;
-  margin-top: 10px;
-  animation: fadeIn 0.5s ease-in-out; /* Subtle animation when shown */
-}
-/* Fade-out animation for the body */
-body {
-  animation: fadeIn 1s ease-in; /* Smooth fade-in on load */
+    background-color: #2c3e50;
 }
 
+#error-message {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Reveal Button with Animation */
+.animated-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.5s ease;
+    animation: pulse 2s infinite;
+}
+
+.animated-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Fade-in and Fade-out for Transitions */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
+/* Reveal and Itinerary Images Styling */
+.reveal-image, .itinerary-image {
+    animation: fadeIn 1s ease-in-out;
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
