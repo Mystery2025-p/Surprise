@@ -13,20 +13,10 @@ revealButton.addEventListener('click', () => {
 submitPasscode.addEventListener('click', () => {
     const passcode = passcodeInput.value;
     if (passcode === '40') {
-        window.location.href = 'riddles.html'; // Change this to the next page you want to navigate to
+        // Correct passcode, navigate to the next page (riddles page)
+        window.location.href = 'riddles.html'; // Adjust as needed for your riddle page URL
     } else {
+        // Incorrect passcode, display the error message and keep the user on the current page
         errorMessage.style.display = 'block';
     }
-});
-
-// Fade-out effect when navigating to the next page
-document.querySelectorAll('button').forEach(button => {
-  button.addEventListener('click', (e) => {
-    document.body.style.animation = "fadeOut 1s ease-in";
-    setTimeout(() => {
-      if (button.id === "submit-passcode") {
-        window.location.href = "riddles.html"; // Adjust as necessary
-      }
-    }, 1000);
-  });
 });
