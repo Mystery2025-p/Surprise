@@ -34,3 +34,15 @@ submitPasscode.addEventListener('click', () => {
     errorMessage.style.display = 'block';
   }
 });
+// Add fade-out effect when navigating
+document.querySelectorAll('button').forEach(button => {
+  button.addEventListener('click', (e) => {
+    document.body.style.animation = "fadeOut 1s ease-in";
+    setTimeout(() => {
+      if (button.id === "submit-passcode") {
+        window.location.href = "riddles.html"; // Adjust as necessary
+      }
+    }, 1000); // Delay matches the fade-out duration
+  });
+});
+
